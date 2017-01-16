@@ -1,7 +1,7 @@
 number = 1
 
 100.times do
-	if number % 3 == 0 and number % 5 == 0
+	if number % 3 == 0 && number % 5 == 0
 		puts "mined minds"
 	elsif number % 3 == 0
 		puts "mined"
