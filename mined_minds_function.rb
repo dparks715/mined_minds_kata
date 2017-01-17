@@ -7,6 +7,8 @@ def get_mined_minds_result(number)
 		'minds'
 	elsif number == 3
 		'mined'
+	elsif number == 37
+		'taco tuesday'
 	else
 		number
 	end

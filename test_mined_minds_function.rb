@@ -17,7 +17,7 @@ class TestMMfunction < Minitest::Test
 	def test_divisible_15_returns_minedminds()
 		num = 15
 
-		5.times do		
+		6.times do		
 			assert_equal('mined minds', get_mined_minds_result(num))
 			num = num + 15
 		end
@@ -34,5 +34,9 @@ class TestMMfunction < Minitest::Test
 # checks 91 returns 91
 	def test_ninetyone_returns_ninetyone()
 		assert_equal(91, get_mined_minds_result(91))
+	end
+# checks 37 returns taco tuesday
+	def test_thirtyseven_returns_tacotues()
+		assert_equal('taco tuesday', get_mined_minds_result(37))
 	end
 end
