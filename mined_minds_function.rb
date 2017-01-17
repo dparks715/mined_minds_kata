@@ -1,5 +1,7 @@
 def get_mined_minds_result(number)
-	if number == 3
+	if number % 5 == 0
+		'minds'
+	elsif number == 3
 		'mined'
 	else
 		number
