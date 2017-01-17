@@ -24,8 +24,12 @@ class TestMMfunction < Minitest::Test
 			else
 		end
 	end
-
+# checks that 10 retuns TEN!
 	def test_10_returns_TEN!()
 		assert_equal('TEN!', get_mined_minds_result(10))
+	end
+
+	def test_ninetyone_returns_ninetyone()
+		assert_equal(91, get_mined_minds_result(91))
 	end
 end
