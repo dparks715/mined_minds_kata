@@ -39,4 +39,8 @@ class TestMMfunction < Minitest::Test
 	def test_thirtyseven_returns_tacotues()
 		assert_equal('taco tuesday', get_mined_minds_result(37))
 	end
+# checks 22 returns 22
+	def test_22_returns_22()
+		assert_equal(22, get_mined_minds_result(22))
+	end
 end
