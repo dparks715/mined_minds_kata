@@ -14,7 +14,7 @@ class TestMMfunction < Minitest::Test
 		assert_equal('mined', get_mined_minds_result(3))
 	end
 
- # tests if numbers 1-100 are divisible by 5, returns minds if so
+ # tests if factors of 5 1-100 are divisible by 5, returns minds if so
 	def test_divisble5_returns_minds()
 			y = 0
 			x = y += 5
@@ -23,5 +23,9 @@ class TestMMfunction < Minitest::Test
 		assert_equal('minds', get_mined_minds_result(x))
 			else
 		end
+	end
+
+	def test_10_returns_TEN!()
+		assert_equal('TEN!', get_mined_minds_result(10))
 	end
 end

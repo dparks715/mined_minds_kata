@@ -1,5 +1,7 @@
 def get_mined_minds_result(number)
-	if number % 5 == 0
+	if number == 10
+		'TEN!'
+	elsif number % 5 == 0
 		'minds'
 	elsif number == 3
 		'mined'
