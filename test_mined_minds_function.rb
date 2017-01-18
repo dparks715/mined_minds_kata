@@ -14,7 +14,11 @@ class TestMMfunction < Minitest::Test
 		assert_equal('mined', get_mined_minds_result(3))
 	end
 
-# checks that 15, 30, 45, 60, 75, 90 return 'mined minds'
+	def test_five_returns_minds()		
+			assert_equal('minds', get_mined_minds_result(5))
+	end
+
+# checks that numbers divisible by 15 return 'mined minds'
 	def test_divisible_15_returns_minedminds()
 		num = 15
 
@@ -24,9 +28,18 @@ class TestMMfunction < Minitest::Test
 		end
 	end
 
-# checks that 5 returns 'minds'
-	def test_five_returns_minds()		
-			assert_equal('minds', get_mined_minds_result(5))
+# checks that numbers divisible by 5 but, not 15 return 'mined minds'
+	def test_divisible_5_returns_minds()
+		num = 5
+
+		20.times do
+			if num % 5 == 0 && num % 3 == 0
+				num = num + 5
+				next
+			end
+			assert_equal('minds', get_mined_minds_result(num))
+			num = num + 5
+		end
 	end
 
 # checks 91 returns 91
