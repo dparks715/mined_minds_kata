@@ -1,14 +1,11 @@
 def get_mined_minds_result(number)
-	if number == 10
-		'TEN!'
-	elsif number % 15 == 0
+	
+	if number % 5 == 0 && number % 3 == 0
 		'mined minds'
-	elsif number == 5
+	elsif number % 5 == 0
 		'minds'
-	elsif number == 3
+	elsif number % 3 == 0
 		'mined'
-	elsif number == 37
-		'taco tuesday'
 	else
 		number
 	end
