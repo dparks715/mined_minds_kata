@@ -56,6 +56,11 @@ class TestMMfunction < Minitest::Test
 		end
 	end
 
+# checks 30 returns 'mined minds'
+	def test_30_returns_minedminds()
+		assert_equal('mined minds', get_mined_minds_result(30))
+	end
+
 # checks 91 returns 91
 	def test_ninetyone_returns_ninetyone()
 		assert_equal(91, get_mined_minds_result(91))
