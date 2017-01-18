@@ -29,16 +29,30 @@ class TestMMfunction < Minitest::Test
 	end
 
 # checks that numbers divisible by 5 but, not 15 return 'mined minds'
-	def test_divisible_5_returns_minds()
+	def test_divisible_5_returns_minedminds()
 		num = 5
 
-		20.times do
+		until num > 100 do
 			if num % 5 == 0 && num % 3 == 0
 				num = num + 5
 				next
 			end
 			assert_equal('minds', get_mined_minds_result(num))
 			num = num + 5
+		end
+	end
+
+# checks that numbers divisible by 3 but, not 15 return 'mined'
+	def test_divisible_3_returns_mined()
+		num = 3
+
+		until num > 100 do
+			if num % 5 == 0 && num % 3 == 0
+				num = num + 3
+				next
+			end
+			assert_equal('mined', get_mined_minds_result(num))
+			num = num + 3
 		end
 	end
 
