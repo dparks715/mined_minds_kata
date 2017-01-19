@@ -56,6 +56,20 @@ class TestMMfunction < Minitest::Test
 		end
 	end
 
+# checks that numbers not divisible by 3 or 5 return number
+	def test_not_divisible_returns_number()
+		num = 1
+
+		until num > 100 do
+			if num % 5 == 0 || num % 3 == 0
+				num = num + 1
+				next
+			end
+			assert_equal(num, get_mined_minds_result(num))
+			num = num + 1
+		end
+	end
+
 # checks 30 returns 'mined minds'
 	def test_30_returns_minedminds()
 		assert_equal('mined minds', get_mined_minds_result(30))
